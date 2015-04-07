@@ -198,7 +198,7 @@ function createDragDropMixin(backend) {
 
     handleDragStart(type, e) {
       var { canDrag, beginDrag } = this._dragSources[type];
-      if (DragOperationStore.isDragging() || !canDrag(this)) {
+      if (DragOperationStore.isDragging() || !canDrag(this, e)) {
         return;
       }
 
